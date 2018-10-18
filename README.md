@@ -21,7 +21,8 @@ The specificity is that you can easily handle multiple translation values for 1 
         "Hey, I am the second option for key 2",
         "yop... and I am... well... the third option"
     ]
-}```
+}
+```
 
 Then you can use it easily :
 `translate("KEY_1")` ==> "Hey, this is my translation key for key 1" 
@@ -35,10 +36,11 @@ or
 
 
 ## usage
-` const translate = require('agent-translate');
+```js
+const translate = require('agent-translate');
   const i18n = translate.init('en-us');
   return i18n("KEY_1");
-`
+```
 
 ### options
 ```js
