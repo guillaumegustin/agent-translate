@@ -18,6 +18,14 @@
   ],
   "author": "Guillaume Gustin <github@guillaumegustin>",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/guillaumegustin/agent-translate/issues"
+  },
+  "homepage": "https://github.com/guillaumegustin/agent-translate",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guillaumegustin/agent-translate.git"
+  },
   "dependencies": {
     "app-root-dir": "^1.0.2"
   },
