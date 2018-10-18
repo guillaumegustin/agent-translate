@@ -13,7 +13,7 @@ The specificity is that you can easily handle multiple translation values for 1 
 
 ```
 
-`
+```json
 {
     "KEY_1":"Hey, this is my translation key for key 1",
     "KEY_2":[
@@ -21,8 +21,7 @@ The specificity is that you can easily handle multiple translation values for 1 
         "Hey, I am the second option for key 2",
         "yop... and I am... well... the third option"
     ]
-}
-`
+}```
 
 Then you can use it easily :
 `translate("KEY_1")` ==> "Hey, this is my translation key for key 1" 
@@ -42,19 +41,21 @@ or
 `
 
 ### options
-`translate.config({
+```js
+translate.config({
   'locales_directory':'my/specific/locales/directory', //default is {{projectRoot}}/locales
   'default_locale':'en-us' //default is 'fr-fr'
   })
-  `
+```
   
   `const i18n = translate.init('en-us');` => will look for 'my/specific/locales/directory/en-us.json
   `const i18n2 = translate.init('fr-fr');` => will look for 'my/specific/locales/directory/fr-fr.json
   `const i18n3 = translate.init('unknown');` => will look for 'my/specific/locales/directory/en-us.json', set here as 'default_locale
  
- ### usage with [dialogflow-fulfillment-nodejs](https://github.com/dialogflow/dialogflow-fulfillment-nodejs)
- `
-  const translate = require('agent-translate');
+### usage with [dialogflow-fulfillment-nodejs](https://github.com/dialogflow/dialogflow-fulfillment-nodejs)
+
+```js
+const translate = require('agent-translate');
   
   exports.myAssistantWebhook = functions.https.onRequest((request, response) => {
 
@@ -71,4 +72,5 @@ or
         //you can now generate a tranlsation value attached to current agent's locale
         agent.add(agent.__('KEY_2'));
     }
-`
+  }
+```
