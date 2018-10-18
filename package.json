@@ -1,0 +1,27 @@
+{
+  "name": "agent-translate",
+  "version": "1.0.0",
+  "description": "This is a translation  /i18n manager module which allows to randomise translations for a given key. This is especially usefull when creating an agent with dialogflow or something.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "i18n",
+    "agent",
+    "translate",
+    "dialogflow",
+    "google-actions",
+    "actions",
+    "bot",
+    "chatbot"
+  ],
+  "author": "Guillaume Gustin <github@guillaumegustin>",
+  "license": "MIT",
+  "dependencies": {
+    "app-root-dir": "^1.0.2"
+  },
+  "devDependencies": {
+    "jest": "^23.6.0"
+  }
+}
