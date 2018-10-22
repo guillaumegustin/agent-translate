@@ -1,6 +1,6 @@
 {
   "name": "agent-translate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This is a translation  /i18n manager module which allows to randomise translations for a given key. This is especially usefull when creating an agent with dialogflow or something.",
   "main": "index.js",
   "scripts": {
