@@ -26,3 +26,15 @@ test('Testing multi values key returing a random value from the list', () => {
             || translatedKey2==='yop... et moi... et bien... la 3eme option').toBeTruthy();
 });
 
+test('Testing with wrong default locales directory', () => {
+    //this should just log a warning as not existing directory should be ignored.
+    translate.config({'locales_directory':'not/existing/path'});
+    const i18n = translate.init('fr-empty');
+    expect(i18n("KEY_1")).toBe('Hey, this is my translation key for key 1');
+});
+
+test('Testing with a default directory that exists but contains no data', ()=> {
+    translate.config({'locales_directory':'__test__/empty'});
+    const i18n = translate.init('fr-empty'); // should still use default file
+    expect(i18n("KEY_1")).toBe('Hey, this is my translation key for key 1');
+});

@@ -49,12 +49,14 @@ class Translate  {
     }
 
     init(locale) {
-        console.log("Initializing i18n with lang:"+locale);
         const lang = locale.indexOf('-')!==-1?locale:`${locale}-${locale}`;
-
         const locales = this._loadLocaleFile(lang);
         
         return (key, params) => {
+
+            if(!locales || Object.keys(locales).length === 0)
+                throw new Error('Error : locales were not loaded correctly. Please use module.config({"locales_directory":"locales/json/files/" to a correct directory.}')
+
             const value = locales[key];
     
             let output = "";
